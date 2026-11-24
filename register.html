@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demonstration registration form for the Web Design and Development course.">
+  <title>Registration | Web Design &amp; Development</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Web Design and Development course home">WD<span>&amp;</span>D</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="staff.html">Course staff</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="register.html" aria-current="page">Registration</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-shell">
+    <section class="page-intro">
+      <p class="eyebrow">JOIN THE COURSE</p>
+      <h1>Student registration</h1>
+      <p class="lead">Complete only the information needed to arrange course participation.</p>
+    </section>
+
+    <section class="content-card form-card" aria-labelledby="form-heading">
+      <h2 id="form-heading">Registration form</h2>
+      <p>Fields marked “required” must be completed. This demonstration does not store or send your information to a permanent database.</p>
+
+      <form id="registration-form" action="/submit" method="post">
+        <fieldset>
+          <legend>Student details</legend>
+          <div class="form-grid">
+            <div class="field">
+              <label for="student-name">Full name (required)</label>
+              <input id="student-name" name="student_name" type="text" autocomplete="name" minlength="2" maxlength="60" required>
+            </div>
+            <div class="field">
+              <label for="student-email">Email address (required)</label>
+              <input id="student-email" name="email" type="email" autocomplete="email" maxlength="100" required>
+            </div>
+            <div class="field">
+              <label for="student-phone">Phone number (optional)</label>
+              <input id="student-phone" name="phone" type="tel" autocomplete="tel" pattern="[0-9+() -]{7,20}" aria-describedby="phone-help">
+              <small id="phone-help">Use 7–20 characters: digits, spaces, +, parentheses, or hyphens.</small>
+            </div>
+            <div class="field">
+              <label for="start-date">Preferred start date (required)</label>
+              <input id="start-date" name="start_date" type="date" min="2026-12-01" max="2027-06-30" required>
+            </div>
+            <div class="field">
+              <label for="student-number">Student number (required)</label>
+              <input id="student-number" name="student_number" type="number" min="1" max="999999" step="1" required>
+            </div>
+            <div class="field">
+              <label for="portfolio-url">Portfolio or project URL (optional)</label>
+              <input id="portfolio-url" name="portfolio_url" type="url" placeholder="https://example.com">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Study preference</legend>
+          <p class="fieldset-hint">Choose one preferred learning format.</p>
+          <div class="choice-list">
+            <label><input type="radio" name="study_format" value="on-campus" required> On-campus sessions</label>
+            <label><input type="radio" name="study_format" value="online"> Online materials</label>
+            <label><input type="radio" name="study_format" value="mixed"> A mixture of both</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Topics of interest</legend>
+          <p class="fieldset-hint">Select any topics you would like to practise.</p>
+          <div class="choice-list">
+            <label><input type="checkbox" name="topic_html" value="yes"> Semantic HTML</label>
+            <label><input type="checkbox" name="topic_css" value="yes"> CSS layout</label>
+            <label><input type="checkbox" name="topic_accessibility" value="yes"> Web accessibility</label>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button class="primary-button" type="submit">Submit registration</button>
+          <button class="secondary-button" type="reset">Reset form</button>
+          <button class="secondary-button" type="button" id="help-button">Show form help</button>
+        </div>
+        <p id="form-help" class="status-message" hidden>Complete the required fields, choose one study preference, and check that your email address is valid.</p>
+        <p id="form-status" class="status-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Web Design &amp; Development — Course Mini-Site</p>
+    <p><a href="index.html#main-content">Return to the course home page</a></p>
+    <p>&copy; 2026 Course Mini-Site. Demonstration content.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,21 @@
+WEB DESIGN & DEVELOPMENT — COURSE OUTLINE
+
+Course overview
+This course introduces the foundations of planning, designing, building, and testing modern websites. It combines core concepts with practical activities.
+
+Main topics
+1. How the web works and the structure of an HTML document
+2. Semantic HTML, headings, links, images, and lists
+3. CSS fundamentals, typography, colours, and page layout
+4. Responsive design for different screen sizes
+5. Forms, tables, and basic JavaScript interactions
+6. Accessibility, usability, and website testing
+
+Learning outcomes
+By the end of the course, students should be able to create a structured web page, style it with CSS, add basic interactions, and check that it is usable and accessible.
+
+Weekly teaching sessions
+- Sunday, 11:00 AM–1:00 PM: Lecture with Dr. Hend Shaaban
+- Wednesday, 11:00 AM–1:00 PM: Practical session with TA Fatma El-Sayed
+
+This outline is a concise course overview prepared for the course mini-site. Follow official course announcements for any additional syllabus details.
